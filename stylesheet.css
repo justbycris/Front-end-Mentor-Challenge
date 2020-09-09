@@ -10,15 +10,22 @@ body {
     font-size: 16px;
     background-color: hsl(0, 100%, 74%);
     background-image: url(images/bg-intro-desktop.png);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
     width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .left {
-    position: relative;
     display: block;
     width: 500px;
-    left: 15%;
-    top: 280px;
+    margin: 25px 55px;
 }
 
 h1 {
@@ -35,7 +42,6 @@ p {
     color: #fff;
     font-size: 16px;
     padding-top: 30px;
-    width: 500px;
     line-height: 25px;
 }
 
@@ -43,27 +49,28 @@ p {
 /*-----------------------------RIGHT-----------------------*/
 
 .right {
-    position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 500px;
-    top: -100px;
-    left: 53%;
+    min-height: 100vh;
+    align-items: center;
 }
 
 .btn-top {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 300;
+    height: 55px;
     background-color: hsl(248, 32%, 49%);
     color: white;
-    width: 100%;
-    height: 55px;
     border-radius: 10px;
     border: none;
     box-shadow: 0 8px #d36563;
     outline: none;
     cursor: pointer;
-    display: block;
+    width: 100%;
 }
 
 .btn-top:hover {
@@ -76,7 +83,7 @@ p {
     margin-top: 25px;
     background-color: #fff;
     border-radius: 10px;
-    height: 450px;
+    height: 430px;
     box-shadow: 0 8px #d36563;
     box-sizing: border-box;
 }
@@ -92,13 +99,14 @@ input {
     font-weight: 700;
     padding-left: 30px;
     color: #303030;
+    flex-direction: column;
 }
 
 input:placeholder-shown {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: gray;
-    padding-left: 30px;
+    padding: 0 30px;
 }
 
 input:nth-child(2) {
@@ -144,19 +152,29 @@ input:nth-child(2) {
 /*-----------------MEDIA QUERIES-------------------------*/
 
 @media screen and (max-width: 480px) {
-    .left {
-        text-align: center;
-        top: 200px;
-    }
-    .right,
-    .container {
-        top: 250px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        margin: 10px auto;
+    main {
         width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-top: 15%;
+    }
+    h1 {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .btn-top {
+        height: 90px;
+    }
+    p {
+        font-size: 1rem;
+        padding-top: 20px;
+    }
+    .right {
+        width: 85%;
+        margin-top: -90px;
+    }
+    input,
+    .btn-bottom {
+        margin: 8px auto;
     }
 }
