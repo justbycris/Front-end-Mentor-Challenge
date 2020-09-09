@@ -83,17 +83,18 @@ p {
     margin-top: 25px;
     background-color: #fff;
     border-radius: 10px;
-    height: 430px;
+    height: auto;
     box-shadow: 0 8px #d36563;
     box-sizing: border-box;
+    padding-bottom: 30px;
 }
 
 input {
     width: 85%;
-    margin: 20px 20px 0px 35px;
+    margin: 10px 20px 0px 35px;
     height: 50px;
     border-radius: 5px;
-    border: 1.5px solid #ddd;
+    border: 1.5px solid hsl(246, 25%, 77%);
     outline: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -109,9 +110,39 @@ input:placeholder-shown {
     padding: 0 30px;
 }
 
+input:focus {
+    border: 1px solid hsl(248, 32%, 49%);
+}
+
 input:nth-child(2) {
     margin-top: 35px;
 }
+
+
+/* NEED TO WORK ON SMALL PART
+.form-control small {
+    opacity: 0;
+}
+
+.form-control.error small {
+    opacity: 1;
+}
+
+small {
+    display: block;
+    color: #bbb;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+small a {
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+*/
 
 .btn-bottom {
     background-color: hsl(154, 59%, 51%);
@@ -151,7 +182,7 @@ input:nth-child(2) {
 
 /*-----------------MEDIA QUERIES-------------------------*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     main {
         width: 100%;
         text-align: center;

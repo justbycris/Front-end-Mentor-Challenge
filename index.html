@@ -23,18 +23,22 @@
         <div class="right">
             <button class="btn-top"><b>Try it free 7 days</b> then $20/mo. thereafter</button>
             <div class="container">
-                <form action="">
+                <form action="" id="form">
                     <label for="fname"></label>
-                    <input type="text" id="fname" name="firstname" placeholder="First Name"><br>
+                    <input type="text" id="fname" name="firstname" placeholder="First Name">
+                    <small>First Name cannot be empty</small><br>
 
                     <label for="lname"></label>
-                    <input type="text" id="lname" name="lastname" placeholder="Last Name"><br>
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                    <small>Last Name cannot be empty</small><br>
 
                     <label for="email"></label>
-                    <input type="text" id="email" name="email" placeholder="Email Address"><br>
+                    <input type="text" id="email" name="email" placeholder="Email Address">
+                    <small>Looks like this is not an email</small><br>
 
                     <label for="pssw"></label>
-                    <input type="text" id="pssw" name="password" placeholder="Password"><br>
+                    <input type="text" id="pssw" name="password" placeholder="Password">
+                    <small>Password cannot be empty</small><br>
 
                     <button type="submit" class="btn-bottom">CLAIM YOUR FREE TRIAL</button>
 
@@ -47,6 +51,7 @@
         </div>
     </main>
 
+    <script src="main.js"></script>
 </body>
 
 </html>
